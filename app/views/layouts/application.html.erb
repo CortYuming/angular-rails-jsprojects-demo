@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Jsprojects</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html ng-app="project">
+  <head>
+    <title>Jsprojects</title>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
+  <body>
 
-</body>
+    <div class="span4 well">
+      <div ng-view></div>
+    </div>
+
+  </body>
 </html>
